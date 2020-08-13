@@ -11,16 +11,21 @@ app = Flask(__name__)
 # creo una funcion llamada home y esta nos va a retornar un texto cuando el
 # usuario entre al home
 def home():
-    return render_template('home.html')
+    return render_template('inicio.html')
 
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('servicios.html')
 
 # hacemos una validacion para confirmar que estamos ejecutando un archivo de ejecucion
 # y no un modulo, esto es mas que todo para que el servidor este el 100% del tiempo
 # escuchando por si hay alguna peticion
+
+
+@app.route('/contact')
+def contact():
+    return render_template('contacto.html')
 
 
 # aca le indicamos cual es el archivo que va a arrancar nuestra aplicacion
